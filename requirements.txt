@@ -1,0 +1,13 @@
+transformers==4.37.2
+accelerate
+ftfy
+tensorboard
+Jinja2
+diffusers==0.22.0
+huggingface-hub==0.25.2
+einops
+
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.2.1
+torchvision==0.17.1
+torchaudio==2.2.1

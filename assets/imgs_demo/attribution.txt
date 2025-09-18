@@ -1,0 +1,2 @@
+Image 02.jpg is collected from DreamBench dataset. Please refer to https://github.com/google/dreambooth.
+Image woman_face.jpg is a generated image using SDXL demo https://huggingface.co/spaces/diffusers/unofficial-SDXL-Turbo-i2i-t2i.
