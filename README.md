@@ -65,7 +65,19 @@ pip install numpy==1.26.4
 ```
 
 ## 📍 Checkpoints
-We have published SwiftEdit's pretrained weights via releases of this repository. Please download all required checkpoints and specify corresponding weight's path before editing.
+We have published SwiftEdit's pretrained weights via releases of this repository. Please download all required checkpoints and specify corresponding weight's path before editing. To download, please follow the instructions below:
+
+```bash
+wget https://github.com/Qualcomm-AI-research/SwiftEdit/releases/download/v1.0/swiftedit_weights.tar.gz.part-aa
+wget https://github.com/Qualcomm-AI-research/SwiftEdit/releases/download/v1.0/swiftedit_weights.tar.gz.part-ab 
+wget https://github.com/Qualcomm-AI-research/SwiftEdit/releases/download/v1.0/swiftedit_weights.tar.gz.part-ac
+wget https://github.com/Qualcomm-AI-research/SwiftEdit/releases/download/v1.0/swiftedit_weights.tar.gz.part-ad
+wget https://github.com/Qualcomm-AI-research/SwiftEdit/releases/download/v1.0/swiftedit_weights.tar.gz.part-ae
+
+cat swiftedit_weights.tar.gz.part-* >swiftedit_weights.tar.gz
+tar zxvf swiftedit_weights.tar.gz
+```
+
 
 ## 📁 Repository Structure
 The main inference code is at ```infer.py```. Below is a small description of each of the scripts / main directories:
@@ -77,6 +89,7 @@ SwiftEdit
 │   ├───attention_processor.py: Base IP-Adapter code.
 |   ├───mask_attention_processor.py: Our customized IP-Adapter code for mask-guided attention.
 |   ├───mask_ip_controller.py: Attention rescaling with mask-guided.
+|---swiftedit_weights/: location for the checkpoints, see above for download instructions.
 ├───infer.py: Main logic code for editing.
 ├───models.py: Image generation and inversion model.
 ├───requirements.txt: Required packages to run this repository.
