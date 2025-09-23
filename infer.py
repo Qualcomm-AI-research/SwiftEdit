@@ -46,7 +46,7 @@ def edit_image(
     final_timestep = torch.ones((1,), dtype=torch.int64, device="cuda") * 999
 
     # Input Image
-    pil_img_cond = Image.open(img_path).resize((512, 512))
+    pil_img_cond = Image.open(img_path).convert("RGB").resize((512, 512))
 
     processed_image = to_tensor(pil_img_cond).unsqueeze(0).to("cuda") * 2 - 1
 
