@@ -12,9 +12,9 @@ from transformers import (
 )
 
 from src.mask_ip_controller import *
-from src.ip_adapter.attention_processor import AttnProcessor2_0 as AttnProcessor
-from src.ip_adapter.attention_processor import IPAttnProcessor2_0 as IPAttnProcessor
-from src.ip_adapter.mask_attention_processor import IPAttnProcessor2_0WithIPMaskController
+from src.attention_processor import AttnProcessor2_0 as AttnProcessor
+from src.attention_processor import IPAttnProcessor2_0 as IPAttnProcessor
+from src.mask_attention_processor import IPAttnProcessor2_0WithIPMaskController
 
 def tokenize_captions(tokenizer, captions):
     inputs = tokenizer(
